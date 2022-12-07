@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<h1>{{ heading }}</h1>
+
+<img alt="Importance of Programming" src="{{ url_for('static', filename='images/importance.png') }}">
+
+<p><small style="color:rgb(165, 37, 37);font-size:50px;">F</small>rom smart TVs to technologically advanced kitchen appliances to online games, puzzles, and over-the-top (OTT) services, technological disruption can be found almost anywhere. Much more is taking place right now, and much more is expected in the coming years.</p>
+<p>As a result, a large number of new jobs are being created, while a large number of existing ones are being re-defined. This is where computer programming, or coding, becomes a necessary skill for those seeking the best job opportunities or looking to improve their current skills.</p>
+
+<h2>What Is Programming?</h2>
+<p>Programming is using a language that a machine can understand in order to get it to perform various tasks. Computer programming is how we communicate with machines in a way that makes them function how we need.</p>
+
+<h2>Why Is it Important to Know About Computer Programming?</h2>
+<p>Computer programming is a fundamental skill for so many different applications, not just software development or cutting-edge research into artificial intelligence.Programming skills are becoming ever more important, quickly turning into the core competency for all kind. From the fan to your mobile, everything required programming. Even electrical and mechanical engineers after their raw workout, will move to the final stage programming.</p>
+<p>Programming is important for learning to innovate, create eco-friendly solutions for global problems, important in our daily life to enhance and increase the power of computers and internet. Programming is important for speeding up the input and output processes in a machine. Also important to automate, collect, manage, calculate, analyze processing of data and information accurately.</p>
+<p>That inescapable fact is leading individuals to seek out new ways of learning to code. Apart from companies in the technology sector, there are an increasing number of businesses relying on computer code. No wonder that eight of the top 25 jobs this year are tech positions</p>
+
+<h2><small style="color:rgba(13, 16, 214, 0.993);font-size:40px;">W</small>hat's most in demand?</h2>
+<ul>
+  <li><a href="{{ url_for('javascript') }}">Javascript</a></li>
+  <li><a href="{{ url_for('python') }}">Python</a></li>
+  <li><a href="{{ url_for('html') }}">HTML</a></li>
+  <li><a href="{{ url_for('css') }}">CSS</a></li>
+  <li><a href="{{ url_for('sql') }}">SQL</a></li>
+</ul>
+
+
+<br><br>
+<h3>Comments Section</h3>
+<form action="/comment" method="post">
+  <textarea name="_comment" cols="100" rows="5" placeholder="What's your favoutite programming language?" required></textarea>
+  <br>
+  <input type="text" name="_name" placeholder="Your name" required>        
+  <button type="submit">Send</button>
+</form>
+
+
+{% for comment in comments %} 
+    <p> <h3><u> {{ comment.name }} </u></h3> {{ comment.comment }} </p>
+{% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>{{ heading }}</h1>
+
+<img alt="python" src="{{ url_for('static', filename='images/python.png') }}">
+
+<p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.</p>
+<p>Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.</p>
+<p>Guido van Rossum began working on Python in the late 1980s as a successor to the ABC programming language and first released it in 1991 as Python 0.9.0.Python 2.0 was released in 2000 and introduced new features such as list comprehensions, cycle-detecting garbage collection, reference counting, and Unicode support. Python 3.0, released in 2008, was a major revision that is not completely backward-compatible with earlier versions. Python 2 was discontinued with version 2.7.18 in 2020.</p>
+
+<h2>The Rise of Big Data and Machine Learning</h2>
+<p>Following the 2007-08 financial crisis, the financial sector took up machine learning and data science in an effort to better target trading opportunities. Several enterprises, including Google, took up Python as their language of choice for their AI-driven missions, largely because it was the only choice for their productionizing and scaling efforts. This spurred the Python ecosystem and resulted in Python overtaking R by 2015 as the top language for machine learning.</p>
+<p>With demand for AI, data analysis and automation came a need for libraries that would help manage Python’s forays into new fields. Between 2008 and 2015, Facebook, Google and Netflix pioneered new tooling, innovative algorithms and coding conventions that both popularized and contributed to the Python community.</p>
+
+<br><br>
+<a href="{{ url_for('index') }}">Return to Home Page</a>
+
+{% endblock %}
